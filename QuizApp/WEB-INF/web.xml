@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!-- QuizServlet: Initializes the quiz session -->
+    <servlet>
+        <servlet-name>QuizServlet</servlet-name>
+        <servlet-class>com.quizapp.QuizServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuizServlet</servlet-name>
+        <url-pattern>/QuizServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- QuizProgressServlet: Handles each submitted answer -->
+    <servlet>
+        <servlet-name>QuizProgressServlet</servlet-name>
+        <servlet-class>com.quizapp.QuizProgressServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuizProgressServlet</servlet-name>
+        <url-pattern>/QuizProgressServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ResultServlet: Shows the final score -->
+    <servlet>
+        <servlet-name>ResultServlet</servlet-name>
+        <servlet-class>com.quizapp.ResultServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResultServlet</servlet-name>
+        <url-pattern>/ResultServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Default welcome file -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
+
+
