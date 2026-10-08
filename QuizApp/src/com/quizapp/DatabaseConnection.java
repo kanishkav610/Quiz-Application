@@ -10,8 +10,8 @@ public class DatabaseConnection {
         }
         return DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/quizdb", 
-                "root", 
-                "Kanish@610"
+                "*****", 
+                "******"
         );
     }
 }
